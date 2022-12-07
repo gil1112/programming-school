@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int ant=0, seg=0, cont=2, nums, dif=0, maiordif=-99999999, x1, x2;
+    cout<<"Escreva quantos numeros que sinceramente nao sei oq vao fazer\n-->";
+        cin>>nums;
+        cout<<"Insira-->";
+        cin>>ant;
+        while(cont<=nums){
+            cout<<"insira--> ";
+                cin>>seg;
+            dif=ant-seg;
+            if(dif>maiordif){
+                maiordif=dif;
+                cout<<"a diferença é "<< maiordif<<endl;
+               x1=ant;
+               x2=seg;
+            }
+            cont=cont+1;
+            ant=seg;
+        }
+        cout<<"a diferença maior é "<<maiordif<<endl;
+        cout<<"os numeros que originaram a difença maior "<<x1<<" e "<<x2<<endl;
+
+    return 0;
+}
