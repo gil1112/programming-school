@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+
+using namespace std; 
+
+int main() 
+{
+    string nome, nomecaro;
+    float prc,quant,total,max;
+    total=0;max=-9999;
+    cout<<"introduza o nome do produto:";
+    cin>>ws;
+    getline(cin,nome);
+    while (nome!="fim"){
+        cout<<"Introduza o preço do produto :";
+        cin>>prc;
+        cout<<"Introduza a quantidade comprada:";
+        cin>>quant;
+        total=total+prc*quant;
+        if(prc>max){
+            max=prc;
+            nomecaro=nome;
+        }
+        cin>>ws;
+        getline(cin,nome);
+    }
+    cout<<"Total a pahar="<<total<<endl;
+    cout<<"Produto mais caro foi-"<<nomecaro<<" e custa"<<max<<endl;
+    return 0;
+}
