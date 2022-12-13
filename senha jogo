@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string senha, tentativa;
+    int cont=0;
+    senha="frane";
+    do {
+        cout<<"Introduza a senha:";
+        cin>>ws;
+        getline(cin,tentativa);
+        cont++;
+        if (tentativa!=senha) cout<<"Erro!\n";
+        
+    } while (tentativa!=senha && cont <3);
+    if (tentativa!=senha)
+        cout<<"Tentativas erradas acesso bloqueado!\n";
+        else
+        cout<<"Parabéns! Teve acesso ao fim de"<<cont<<"tentativa(s)\n";
+    
+    return 0; 
+}
