@@ -1,0 +1,40 @@
+#include <iostream>
+
+ 
+
+using namespace std;
+
+ 
+
+int
+max (int x, int y)
+{
+  int resultado;
+  if (x > y)
+    resultado = x;
+  else
+    resultado = y;
+  return resultado;
+}
+
+ 
+
+int
+Small (int x, int y)
+{
+  int resultado;
+  if (x > y)
+    resultado = y;
+  else
+    resultado = x;
+  return resultado;
+}
+
+ 
+
+int
+main ()
+{
+  cout << max (20, 10) << endl;
+  cout << Small (20, 10) << endl;
+}
